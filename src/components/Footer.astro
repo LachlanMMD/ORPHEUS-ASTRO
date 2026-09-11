@@ -1,0 +1,113 @@
+<footer class="site-footer">
+  <div class="footer-brand">
+    <div class="footer-logo">
+      <div class="logo-placeholder">LOGO</div>
+      <span>RÅDGIVNING ORFEUS</span>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur. Quis senectus felis turpis lorem congue feugiat sagittis dictum.</p>
+  </div>
+
+  <div class="footer-links">
+    <div class="footer-column">
+      <h3>Socials</h3>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Vores sider</h3>
+      <a href="#">Lorem</a>
+      <a href="#">Ipsum</a>
+      <a href="#">Dolor</a>
+      <a href="#">Sit Amet</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Kontakt</h3>
+      <p>+45 70604640</p>
+      <p>kontakt@raadgivningen-orfeus.dk</p>
+      <p>CVR: 46258657</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--gray-500);
+    color: white;
+    padding: 120px 108px;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+  }
+
+  .footer-brand {
+    max-width: 600px;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .logo-placeholder {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    color: var(--gray-500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .footer-logo span {
+    font-family: var(--font-body);
+    font-size: 42px;
+    font-weight: 600;
+  }
+
+  .footer-brand > p {
+    margin-top: 40px;
+    font-size: 28px;
+    line-height: 1.55;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 100px;
+    row-gap: 60px;
+  }
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-column h3 {
+    font-family: var(--font-body);
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+
+  .footer-column a,
+  .footer-column p {
+    color: white;
+    font-family: var(--font-body);
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  .footer-column a {
+    text-decoration: underline;
+  }
+
+  .footer-column p {
+    margin: 0;
+  }
+</style>

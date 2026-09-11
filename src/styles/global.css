@@ -1,0 +1,13 @@
+:root {
+  --green-400: #a8beac;
+  --orange-400: #ff7548;
+  --gray-500: #70767b;
+
+  --font-display: "DM Sans", sans-serif;
+  --font-heading: "Lexend Exa", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}

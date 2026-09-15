@@ -1,66 +1,91 @@
+---
+import "../styles/global.css";
+import { Image } from "astro:assets";
+
+import firstImage from "../assets/imgs/card-1.jpg";
+import secondImage from "../assets/imgs/card-2.jpg";
+import thirdImage from "../assets/imgs/card-3.jpg";
+import harpeImage from "../assets/logo/logo-harpe.png";
+import telefonImage from "../assets/imgs/telefon.png";
+
+import cardMovie from "../assets/mp4/telefon.mp4";
+---
+
 <main>
   <section class="hero">
     <div class="hero-content">
-      <h1>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT.</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.</p>
-      <button class="cta-button">Lorem Ipsum</button>
+      <h1>RÅDGIVNINGEN ORFEUS</h1>
+      <p>Rådgivningen Orfeus (RO) er en frivilligdrevet, landsdækkende organisation, der tilbyder gratis og fortrolig rådgivning og støtte til mennesker, der er berørt af rusmiddelmisbrug.</p>
+      <button class="cta-button">LÆS MERE</button>
     </div>
+    <Image src={harpeImage} alt="Harpe Logo" class="hero-image" />
   </section>
-
   <section class="intro-cards">
     <div class="intro-content">
-      <h2>Lorem Ipsum Dolor Sit Amet Consectetur</h2>
-      <p>Lorem ipsum dolor sit amet consectetur. Diam eget ultricies tincidunt vulputate elementum sit. Eu non morbi malesuada platea eu.</p>
+      <h2>Viden, Råd og Erfaringer</h2>
+      <p>Bliv klogere på misbrug og livet omkring det gennem faglig viden, konkrete råd og personlige erfaringer. Her kan du møde rådgiverens perspektiv, komme tæt på livet som pårørende og blive klogere på de tegn, der kan være værd at være opmærksom på.</p>
     </div>
 
     <div class="intro-grid">
       <div class="intro-card">
-        <div class="intro-image"></div>
-        <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <Image src={firstImage} alt="Card 1" class="intro-image" />
+        <h4>Rådgiverens Råd</h4>
+        <p>Få konkrete råd og faglige perspektiver fra Orfeus’ rådgivere om misbrug, relationer og livet som pårørende.</p>
       </div>
 
       <div class="intro-card">
-        <div class="intro-image"></div>
-        <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <Image src={secondImage} alt="Card 2" class="intro-image" />
+        <h4>Påførendes Fortællinger.</h4>
+        <p>Mød Emma og Sebastian, der deler deres erfaringer og sætter ord på de tanker, følelser og dilemmaer, der kan være svære at stå alene med.</p>
       </div>
 
       <div class="intro-card">
-        <div class="intro-image"></div>
-        <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <Image src={thirdImage} alt="Card 3" class="intro-image" />
+        <h4>5 Tegn på Misbrug</h4>
+        <p>Bliv klogere på nogle af de tegn og forandringer, der kan være værd at lægge mærke til, hvis du er bekymret for et menneske tæt på dig..</p>
       </div>
     </div>
   </section>
 
   <section class="statement">
     <div class="statement-content">
-      <h2>Lorem Ipsum Dolor Sit Amet Consectetur.</h2>
-      <button class="cta-button">Lorem Ipsum</button>
+      <h2>Vil Du Dele Din Historie?</h2>
+      <p>Dine erfaringer som pårørende kan gøre en forskel for andre. Når vi deler personlige historier, kan flere genkende sig selv og føle sig mindre alene i en sårbar situation – og måske finde modet til at række ud efter støtte. Derfor opfordrer vi altid pårørende til at dele deres historie anonymt med Orfeus.</p>
+      <button class="cta-button">SKRIV TIL OS HER</button>
     </div>
   </section>
 
   <section class="cards">
-    <h2>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam eget ultricies tincidunt vulputate elementum sit.</p>
+    <div class="cards-content">
+      <h2>Rådgivningstilbud - Brug for at Snakke med Nogen?</h2>
+      <p>Orfeus tilbyder rådgivning i tre forskellige formater, så du kan vælge den form for støtte, der passer bedst til dig og din situation: rådgivning over telefonen, individuelle samtaleforløb eller gruppeforløb.</p>
+    </div>
 
     <div class="grid_2-2">
-      <div class="textbox">
-        <h3>Lorem Ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <button class="cta-button">Lorem Ipsum</button>
-      </div>
-
-      <div class="image-placeholder"></div>
-
-      <div class="image-placeholder"></div>
+      <Image src={telefonImage} alt="Telefon" class="image-placeholder" />
 
       <div class="textbox">
-        <h3>Lorem Ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <button class="cta-button">Lorem Ipsum</button>
+        <h3>Rådgivningstelefonen</h3>
+        <p>Rådgivningstelefonen er for dig, der har brug for nogen at tale med her og nu. Du kan ringe, når du har brug for at blive lyttet til, vende din situation eller få rådgivning, uden at du binder dig til et længere forløb.</p>
+
+        <p>Rådgivningstelefonen er åbent mandag til fredag kl. 14.00-18.00.</p>
+        <button class="cta-button">RING TIL ORFEUS</button>
       </div>
+
+      <div class="textbox">
+        <h3>Samtaleforløb</h3>
+        <p>Det individuelle forløb består af fire telefonsamtaler med mulighed for forlængelse, mens gruppeforløbene typisk består af seks møder over cirka tre måneder.</p>
+
+        <h4>Individuelt forløb</h4>
+        <p>Et individuelt forløb er for dig, der ønsker støtte og rådgivning over flere samtaler. Du bliver matchet med en fast rådgiver, som følger dig gennem forløbet, så der er tid og rum til at gå i dybden med netop din situation.</p>
+        <button class="cta-button_2">LÆS MERE</button>
+
+        <h4>Gruppeforløb</h4>
+        <p>Gruppeforløbet er for dig, der er pårørende til et menneske med misbrug og ønsker at møde andre i en lignende situation. Her får du mulighed for at dele erfaringer, spejle dig i andre og sammen reflektere over de udfordringer, der kan følge med livet som pårørende.</p>
+        <button class="cta-button_2">LÆS MERE</button>
+      </div>
+
+      <video src={cardMovie} class="video-placeholder" controls></video>
     </div>
   </section>
 </main>

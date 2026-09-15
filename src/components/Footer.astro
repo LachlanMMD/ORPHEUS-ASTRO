@@ -1,14 +1,17 @@
 ---
+import "../styles/global.css";
+import { Image } from "astro:assets";
 
+import harpeImageSmall from "../assets/logo/logo-small-light.svg";
 ---
+
 <footer class="site-footer">
   <div class="footer-brand">
     <div class="footer-logo">
-      <div class="logo-placeholder">LOGO</div>
+      <Image src={harpeImageSmall} alt="Harpe Logo" class="footer-logo-image" />
       <span>RÅDGIVNING ORFEUS</span>
     </div>
-
-    <p>Lorem ipsum dolor sit amet consectetur. Quis senectus felis turpis lorem congue feugiat sagittis dictum.</p>
+    <p>Rådgivningen Orfeus – fællesskab for familier berørt af misbrug (RO) er en frivillig organisation, som yder gratis rådgivning og støtte til mennesker ramt af misbrug.</p>
   </div>
 
   <div class="footer-links">
@@ -20,10 +23,10 @@
 
     <div class="footer-column">
       <h3>Vores sider</h3>
-      <a href="#">Lorem</a>
-      <a href="#">Ipsum</a>
-      <a href="#">Dolor</a>
-      <a href="#">Sit Amet</a>
+      <a href="#">Rådgivningstilbud</a>
+      <a href="#">Om os</a>
+      <a href="#">Bliv Rådgiver</a>
+      <a href="#">Bigdragsydere</a>
     </div>
 
     <div class="footer-column">
@@ -33,84 +36,136 @@
       <p>CVR: 46258657</p>
     </div>
   </div>
+
+  <style>
+    .site-footer {
+      background-color: var(--gray-500);
+      color: white;
+      padding: 100px 120px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 100px;
+    }
+
+    .footer-brand {
+      max-width: 400px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .footer-logo span {
+      font-family: var(--font-body);
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .footer-brand p {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    .footer-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 40px;
+      row-gap: 44px;
+      align-items: start;
+    }
+
+    .footer-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+    }
+
+    .footer-column h3 {
+      font-family: var(--font-body);
+      font-size: 16px;
+      margin: 0 0 4px;
+    }
+
+    .footer-column a,
+    .footer-column p {
+      color: white;
+      font-family: var(--font-body);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .footer-column a {
+      text-decoration: underline;
+    }
+
+    .footer-column p {
+      margin: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      .site-footer {
+        padding: 50px 20px 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 40px;
+      }
+
+      .footer-brand {
+        width: 100%;
+        max-width: 320px;
+      }
+
+      .footer-logo {
+        gap: 10px;
+      }
+
+      .footer-logo-image {
+        width: 40px;
+        height: auto;
+      }
+
+      .footer-logo span {
+        font-size: 16px;
+      }
+
+      .footer-brand p {
+        margin-top: 14px;
+
+        font-size: 12px;
+        line-height: 1.45;
+      }
+
+      .footer-links {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        column-gap: 30px;
+        row-gap: 30px;
+      }
+
+      .footer-column {
+        gap: 3px;
+      }
+
+      .footer-column h3 {
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
+
+      .footer-column a,
+      .footer-column p {
+        font-size: 12px;
+        line-height: 1.45;
+      }
+    }
+  </style>
 </footer>
-
-<style>
-  .site-footer {
-    background-color: var(--gray-500);
-    color: white;
-    padding: 120px 108px;
-    display: flex;
-    justify-content: space-between;
-    gap: 100px;
-  }
-
-  .footer-brand {
-    max-width: 600px;
-  }
-
-  .footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-  }
-
-  .logo-placeholder {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: white;
-    color: var(--gray-500);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-  }
-
-  .footer-logo span {
-    font-family: var(--font-body);
-    font-size: 42px;
-    font-weight: 600;
-  }
-
-  .footer-brand > p {
-    margin-top: 40px;
-    font-size: 28px;
-    line-height: 1.55;
-  }
-
-  .footer-links {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    column-gap: 100px;
-    row-gap: 60px;
-  }
-
-  .footer-column {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .footer-column h3 {
-    font-family: var(--font-body);
-    font-size: 24px;
-    margin-bottom: 4px;
-  }
-
-  .footer-column a,
-  .footer-column p {
-    color: white;
-    font-family: var(--font-body);
-    font-size: 24px;
-    line-height: 1.5;
-  }
-
-  .footer-column a {
-    text-decoration: underline;
-  }
-
-  .footer-column p {
-    margin: 0;
-  }
-</style>

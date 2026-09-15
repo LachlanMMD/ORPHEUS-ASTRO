@@ -8,7 +8,8 @@ import thirdImage from "../assets/imgs/card-3.jpg";
 import harpeImage from "../assets/logo/logo-harpe.png";
 import telefonImage from "../assets/imgs/telefon.png";
 
-import cardMovie from "../assets/mp4/telefon.mp4";
+import cardMovie1 from "../assets/mp4/telefon.mp4";
+import cardMovie2 from "../assets/mp4/samtale.mp4";
 ---
 
 <main>
@@ -62,7 +63,7 @@ import cardMovie from "../assets/mp4/telefon.mp4";
     </div>
 
     <div class="grid_2-2">
-      <Image src={telefonImage} alt="Telefon" class="image-placeholder" />
+      <video src={cardMovie1} class="video-placeholder" controls></video>
 
       <div class="textbox">
         <h3>Rådgivningstelefonen</h3>
@@ -85,7 +86,7 @@ import cardMovie from "../assets/mp4/telefon.mp4";
         <button class="cta-button_2">LÆS MERE</button>
       </div>
 
-      <video src={cardMovie} class="video-placeholder" controls></video>
+      <video src={cardMovie2} class="video-placeholder" controls></video>
     </div>
   </section>
 </main>
